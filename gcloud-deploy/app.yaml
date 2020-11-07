@@ -1,0 +1,33 @@
+runtime: python38
+service: default
+
+handlers:
+  - url: /
+    static_files: dist/index.html
+    upload: dist/index.html
+    expiration: "0h 3m"
+    secure: always
+
+  - url: /auth(.*)
+    static_files: dist/index.html
+    upload: dist/index.html
+    expiration: "0h 3m"
+    secure: always
+
+  - url: /admin(.*)
+    static_files: dist/index.html
+    upload: dist/index.html
+    expiration: "0h 3m"
+    secure: always
+
+  - url: /redirection(.*)
+    static_files: dist/index.html
+    upload: dist/index.html
+    expiration: "0h 3m"
+    secure: always
+
+  - url: /(.*)
+    static_files: dist/\1
+    upload: dist/(.*)
+    expiration: "30d 30m"
+    secure: always

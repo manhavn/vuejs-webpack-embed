@@ -1,0 +1,6 @@
+/build/
+/build_embed/
+/config/
+/config_embed/
+/dist/
+/*.js
