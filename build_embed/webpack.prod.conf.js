@@ -31,9 +31,6 @@ module.exports.plugins = (module.exports.plugins || []).concat([
   new webpack.DefinePlugin({
     'process.env': {
       NODE_ENV: '"production"',
-      // VUE_APP_SDK_SERVICE: services.VUE_APP_SDK_SERVICE,
-      // VUE_APP_WSS_SERVICE: services.VUE_APP_WSS_SERVICE,
-      // VUE_APP_API_SERVICE: services.VUE_APP_API_SERVICE,
       VUE_APP_SDK_SERVICE: process.env.SERVE === "LOCAL" ? services.LOCAL_VUE_APP_SDK_SERVICE : services.VUE_APP_SDK_SERVICE,
       VUE_APP_WSS_SERVICE: process.env.SERVE === "LOCAL" ? services.LOCAL_VUE_APP_WSS_SERVICE : services.VUE_APP_WSS_SERVICE,
       VUE_APP_API_SERVICE: process.env.SERVE === "LOCAL" ? services.LOCAL_VUE_APP_API_SERVICE : services.VUE_APP_API_SERVICE,
